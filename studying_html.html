@@ -4,15 +4,500 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="studying_html.css">
     <title>HTML&CSS For None Developers</title>
 </head>
 <body>
-    <section id="html-tag">
-        <section id="html-decorate-text">
+    <section id="understand-html" class="chapter">
+        <h1 class="understand-html">1. HTML 이해하기</h1>
+    </section>
+
+    <section id="html-tag" class="chapter">
+        <h1 class="html-tag">2. HTML 태그</h1>
+        
+        <section class="main" id="about-html-tag">
+            <h3 class="index">1: HTML 태그 소개</h3>
+
+        </section>
+
+        <!-- 2. 제목과 단락요소 -->
+        <section class="main" id="title-textblock">
+                <h3 class="index">2: 제목과 단락요소</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Accusamus veritatis ex officiis saepe aspernatur recusandae tenetur, 
+                    exercitationem iure officia culpa explicabo sit quisquam optio beatae dolorum quae, 
+                    molestias quas consectetur.
+                </p>    
+        </section>
+
+        <!-- 3. 텍스트를 꾸며주는 요소 -->
+        <section class="main" id="decorate-text">
+            <h3 class="index">3: 텍스트를 꾸며주는 요소</h3>
             <p>
-                <b>Lorem</b><i>ipsum</i>dolor sit amet <br>
-                <u>Lorem</u><s>ipsum</s>dolor sit amet
+                <b>Lorem</b><i> ipsum</i> dolor sit amet <br>
+                <u>Lorem</u><s> ipsum</s> dolor sit amet
             </p>
+        </section>
+
+        <!-- 4. 앵커요소 -->
+        <section class="main" id="anchor">
+            <h3 class="index">4: 앵커 요소</h3>
+            <a href="">property: target="_self"-default, "_blank"-새창 (나머진 요즈음 안씀)</a>
+        </section>
+
+        <!-- 5. 의미가 없는 컨테이너 요소 -->
+        <section class="main" id="meaningless-container">
+            <h3 class="index">5: 의미가 없는 컨테이너 요소</h3>
+            <div>block level: div, p, ...</div>
+            <span>inline level: span, b, i, u, s, ...</span>
+        </section>
+
+        <!-- 6. 리스트 요소 -->
+        <section class="main" id="list">
+            <h3 class="index">6: 리스트 요소</h3>
+            <div class="ex-box">
+                <h4 class="subtitle">순서 없는 리스트</h4>
+                <ul>
+                    <li>순서</li>
+                    <li>없는</li>
+                    <li>리스트</li>
+                </ul>
+            </div>
+            <div class="ex-box">
+                <h4 class="subtitle">순서 있는 리스트</h4>
+                <ol>
+                    <li>순서</li>
+                    <li>있는</li>
+                    <li>리스트</li>
+                </ol>
+            </div>
+            <section class="group">
+                <h3 class="subtitle">용어태그</h3>
+                <dl>
+                    <dt>용어태그</dt>
+                    <dd>Like this,</dd>
+                    <dd>용어 정의나 설명 태그를 여러개 ㄱㄴ</dd>
+        
+                    <dt>피그말리온 효과</dt>
+                    <dd>타인의 기대나 관심으로 인하여 능률이 오르거나 결과가 좋아지는 현상</dd>
+        
+                    <dt>언더독 효과</dt>
+                    <dd>사람들이 약자라고 믿는 주체를 응원하게 되는 현상</dd>
+                </dl>
+            </section>
+        </section>
+
+        <!-- 7. 이미지 요소 -->
+        <section class="main" id="image">
+            <h3 class="index">7: 이미지 요소</h3>
+            <div class="ex-box">
+                <img src="" alt="무언가의 사진. 사실 없음">
+            </div>
+            <div class="explanation">
+                <section class="group">
+                    <h3 class="subtitle">이미지 태그 설명</h3>
+                    <table>
+                        <tr>
+                            <th>이름</th>
+                            <th>설명</th>
+                        </tr>
+                        <tr>
+                            <td>img</td>
+                            <td>이미지 삽입. 빈태그</td>
+                        </tr>
+                        <tr>
+                            <td>src 속성</td>
+                            <td>(필수) 이미지의 경로</td>
+                        </tr>
+                        <tr>
+                            <td>alt 속성</td>
+                            <td>(필수) 이미지의 대체 텍스트</td>
+                        </tr>
+                        <tr>
+                            <td>width/height 속성</td>
+                            <td>(없을 시 원본 크기)값 입력 > 자동으로 픽셀단위 계산. 고정 이미지일 경우 굿. 하나 선언 > 자동 비율</td>
+                        </tr>
+                        <tr>
+                            <td>상대경로와 절대경로</td>
+                            <td>상대-웹페이지 기준 이미지 위치, 절대-이미지 위치의 전체 경로</td>
+                        </tr>
+                        <tr>
+                            <td>이미지 파일 형식</td>
+                            <td>gif(색 제한, 용량 적음, 투명 및 애니메이션), jpg(일반 이미지, 높은 압축률, 자연스러운 색상, 투명X), png(손실 적음, 투명, 반투명 모두 지원. 권장)</td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+        </section>
+
+
+        <!-- 8, 9. 테이블 요소 -->
+        <section class="main" id="table1">
+            <h3 class="index">8: 테이블 요소1</h3>
+            <div class="ex-box">
+                <h3 class="subtitle">표: 가로방향-행 row, 세로방향-열 column</h3>
+                <table>
+                    <tr>
+                        <th>속성</th>
+                        <th>설명</th>
+                    </tr>
+                    <tr>
+                        <td>table</td>
+                        <td>표를 나타내는 태그</td>
+                    </tr>
+                    <tr>
+                        <td>tr</td>
+                        <td>행을 나타내는 태그</td>
+                    </tr>
+                    <tr>
+                        <td>th</td>
+                        <td>제목 셀을 나타내는 태그</td>
+                    </tr>
+                    <tr>
+                        <td>td</td>
+                        <td>셀을 나타내는 태그</td>
+                    </tr>
+                </table>
+                <ul><li>하나 이상의 tr + tr의 자식 th, td</li></ul>
+                
+            </div>
+            <div class="explanation">
+                <section class="group">
+                    <h3 class="subtitle">표의 구조 2</h3>
+                    <table>
+                        <caption>표의 구조와 관련된 태그</caption>
+                        <thead>
+                            <tr>
+                                <th>이름</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>caption</td>
+                                <td>표의 제목을 나타내는 태그</td>
+                            </tr>
+                            <tr>
+                                <td>thead</td>
+                                <td>제목행을 그룹화하는 태그</td>
+                            </tr>
+                            <tr>
+                                <td>tbody</td>
+                                <td>본문행을 그룹화하는 태그</td>
+                            </tr>
+                            <tr>
+                                <td>tfoot</td>
+                                <td>바닥행을 그룹화하는 태그</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="group">
+                    <h3 class="subtitle">
+                        html 버전에 따른 tfoot 위치
+                    </h3>
+                    <ul>
+                        <li>html4: tfoot > tbody</li>
+                        <li>html5: tfoot의 위치가 tbody 앞뒤 상관 없음</li>
+                        <li>html5.1~: tbody > tfoot</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+
+
+        <section class="main" id="table2">
+            <h3 class="index">9: 테이블 요소2</h3>
+            <section class="ex-box">
+                <h3 class="subtitle"></h3>
+                <table >
+                    <caption>specification values</caption>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Grade</th>
+                            <th rowspan="2">Point</th>
+                            <th colspan="2">Strength</th>
+                            <th rowspan="2">Percent</th>
+                        </tr>
+                        <tr>
+                            <th>kg/mm</th>
+                            <th>lb/in</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hard</td>
+                            <td>0.45</td>
+                            <td>56.2</td>
+                            <td>80,000</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Medium</td>
+                            <td>0.45</td>
+                            <td>49.2</td>
+                            <td>70,000</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>Soft</td>
+                            <td>0.45</td>
+                            <td>42.2</td>
+                            <td>60,000</td>
+                            <td>30</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="ex-box">
+                <h3 class="subtitle">설명</h3>
+                <ul>
+                    <li>행(가로) 세로합치기: rowspan</li>
+                    <li>열(세로) 가로합치기: colspan</li>
+                </ul>
+            </section>
+            <section class="explanation">
+                <section class="group">
+                    <h3 class="subtitle">추가설명</h3>
+                    <div class="text">table 관련 태그</div>
+                    <ul>
+                        <li>"colgroup" tag: 표의 열을 묶는 그룹 정의</li>
+                        <li>"col" tag: 표의 열, 공통 의미 부여, "colgroup"내에서</li>
+                        <li>"scope" property: 스크린 리더기가 읽어줄 방향</li>
+                        <li>"headers" property: 해당 셀과 관련된 id정보 전달. 시각X</li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+
+
+
+        <!-- 10, 11. 폼 요소 -->
+        <section class="main" id="form1">
+            <h3 class="index">10: 폼 요소1</h3>
+            <section class="ex-box">
+                <div class="text">
+                    폼 요소: 서버에 데이터를 전달하기 위한 요소
+                </div>
+                <ul>
+                    <li>대표적 폼 요소</li> 
+                    <li>내용이 없는 빈 요소</li>
+                    <li>type 속성을 통해 여러 종류의 입력양식으로 나타남</li>
+                </ul>
+            </section>
+            <section class="explanation">
+                <section class="group">
+                    <h3 class="subtitle">type: text</h3>
+                    <input type="text" placeholder="ooo">
+                    <div class="text">아이디, 이름, 주소, 전화번호 등 단순한 텍스트 입력할 때 사용</div>
+                    <ul>
+                        <li>type:text의 "placeholder" 속성</li>
+                        <li>사용자가 입력하기 전 미리 화면에 노출하는 값</li>
+                        <li>입력하는 값의 양식을 표현할 수 있음</li>
+                    </ul>
+                </section>
+                <section class="group">
+                    <h3 class="subtitle">type: password</h3>
+                    <input type="password">
+                    <div class="text">암호와 같이 공개할 수 없는 내용을 입력할 때 사용</div>
+                    <ul>
+                        <li>화면에는 type:text처럼 나타남</li>
+                        <li>실제로 입력할 때는 값을 노출하지 않음</li>
+                    </ul>
+
+                </section>
+                <section class="group">
+                    <h3 class="subtitle">type: radio</h3>
+                    <input type="radio" name="gender">남자
+                    <input type="radio" name="gender">여자
+                    <div class="text">라디오 버튼을 만들 때 사용</div>
+                    <ul>
+                        <li>중복선택 불가</li>
+                        <li>하나의 항목만을 선택</li>
+                    </ul>
+                </section>
+                <section class="group">
+                    <h3 class="subtitle">type: checkbox</h3>
+                    <input type="checkbox" name="hobby">등산
+                    <input type="checkbox" name="hobby">독서
+                    <input type="checkbox" name="hobby">운동
+                    <div class="text">체크박스 만들 때 사용</div>
+                    <ul><li>중복선택 가능</li></ul>
+
+                </section>
+            </section>
+            <section class="explanation">
+                <section class="group">
+                    <h3 class="subtitle">추가설명</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>name</th>
+                                <th colspan="2">explanation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"checked" property</td>
+                                <td>값이 별도로 존재하지 않는 boolean</td>
+                                <td>true: 속성 O || false: 속성 X</td>
+                            </tr>
+                            <tr>
+                                <td>"name" property</td>
+                                <td colspan="2">라디오 버튼과 체크박스를 그룹화시켜주는 속성</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+        </section>
+
+        <section class="main" id="form2">
+            <h3 class="index">11: 폼 요소 2</h3>
+            <section class="explanation">
+                <section class="group">
+                    <h3 class="subtitle">type: file</h3>
+                    Upload profile picture: <input type="file">
+                    <div class="text">파일을 서버에 올릴 때 사용</div>
+                    <ul>
+                        <li>브라우저에 따라 표현 형태만 다름</li>
+                    </ul>
+                </section>
+                <section class="group">
+                    <h3 class="subtitle">type: submit | reset | image | button</h3>
+                    <form action="">
+                        message: <input type="text" name="message"><br>
+                        <input type="submit">
+                        <input type="reset">
+                        <input type="image" src="" alt="">
+                        <input type="button" value="버튼">
+                    </form>
+                    <div class="text">submit, reset, image, button: 클릭 가능한 버튼 생성</div>
+                    <ul>
+                        <li>submit: form값을 전송</li>
+                        <li>reset: form값 초기화</li>
+                        <li>image: 이미지 삽입 (==reset)</li>
+                        <li>button: 기능X</li>
+                    </ul>
+                </section>
+                <section class="group">
+                    <h3 class="subtitle">추가설명</h3>
+                    <div class="text">이미지 버튼</div>
+                    <ul>
+                        <li>src, alt 속성 반드시 필요</li>
+                        <li>width, height 적용 가능</li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+
+        <section class="main" id="form3">
+            <h3 class="index">12: 폼 요소 3</h3>
+            <section class="explanation">
+                <section class="group">
+                    <h3 class="subtitle">"select" tag</h3>
+                    <select>
+                        <option value="서울">서울</option>
+                        <option value="경기">경기</option>
+                        <option value="강원">강원</option>
+                    </select>
+                    <div class="text">선택목록상자, 콤보박스라고도 함</div>
+                    <ul>
+                        <li>선택지를 리스트 형태로 노출</li>
+                        <li>그 중 하나를 선택</li>
+                        <li>"multiple" prop로 다중 선택</li>
+                        <li>"option" tag로 각 항목 나타냄</li>
+                        <li>"seleted" prop: 선택된 항목</li>
+                    </ul>
+                </section>
+                <section class="group">
+                    <h3 class="subtitle">"textarea" tag</h3>
+                    <textarea name="" id="" cols="10" rows="5">
+                    </textarea>
+                    <div class="text">"rows", "cols" props: 텍스트 상자 크기 조절</div>
+                    <ul>
+                        <li>cols: 가로 크기를 조절(정확한 글자수X)</li>
+                        <li>rows: 세로 크기 조절(화면에 보여지는 줄 수)</li>
+                    </ul>
+                </section>
+                <section class="group">
+                    <h3 class="subtitle">"button" tag</h3>
+                    <button type="submit">submit</button>
+                    <button type="reset">reset</button>
+                    <button type="button">button</button>
+                    <div class="text">submit, reset, button: 3가지 타입</div>
+                    <ul>
+                        <li>"input" type의 submit, reset, button과 동 기능</li>
+                        <li>빈 태그 X</li>
+                        <li>내용을 직접 넣으므로 자유로운 스타일 표현</li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+
+        <section id="form4" class="main">
+            <h3 class="title">13: 폼 요소 4</h3>
+            <section class="explanation">
+                <section class="group">
+                    <h3 class="subtitle">"label" tag</h3>
+                    <label for="name">name</label>: <input type="text" id="name"><br>
+                    <label for="nickname">nickname</label>: <input type="text" id="nickname"><br>
+                    <label for="address">add</label>
+                    <input type="text" id="address"><br>
+
+                    <div class="text">form 요소의 이름과 form 요소를 명시적으로 연결</div>
+                    <ul>
+                        <li>모든 form 요소에 사용 가능</li>
+                        <li>form 요소의 id 속성값과 "label"의 for 속성 값을 같게</li>
+                        <li>label을 사용하면 클릭 시 해당 form 클릭한 것처럼 동작</li>
+                        <li>스크린 리더기를 통해 들으면 label을 함께 읽음</li>
+                        <li>사용성, 접근성 측면으로 중요한 역할을 하므로 반드시 사용</li>
+                    </ul>
+                </section>
+                <section class="group">
+                    <h3 class="subtitle">"form", "fieldset", "legend" tag</h3>
+                    <form action="" method="">
+                        <fieldset>
+                            <legend>기본정보</legend>
+                            폼 요소들...
+                        </fieldset>
+                        <fieldset>
+                            <legend>부가정보</legend>
+                            폼 요소들...
+                        </fieldset>
+                    </form>
+
+                    <div class="text">form 요소 구조화</div>
+                    <ul>
+                        <li>"form" tag</li>
+                        <ul>
+                            <li>form 요소를 감싸는 태그</li>
+                            <li>데이터를 묶어 서버로 전송</li>
+                            <li>대표적 속성</li>
+                            <ul>
+                                <li>"action" prop: 데이터 처리를 위한 서버 주소</li>
+                                <li>"method" prop: 데이터 전송 방식</li>
+                                <ul>
+                                    <li>get: 데이터 전송 시 주소창에 파라미터 형태로 붙어 데이터 노출</li>
+                                    <li>post: 데이터 전송 시 데이터 노출 X</li>
+                                </ul>
+                            </ul>
+                        </ul>
+                        <li>"fieldset" tag</li>
+                        <ul>
+                            <li>여러개의 form 요소 그룹화하여</li>
+                            <li>구조적으로 만듦</li>
+                            <li>form 성격에 따라 구분</li>
+                        </ul>
+                        <li>"legend" tag</li>
+                        <ul>
+                            <li>폼 요소의 제목</li>
+                            <li>fieldset 내부에 작성</li>
+                            <li>"fieldst"의 자식으로 반드시 최상단</li>
+                        </ul>
+                    </ul>
+                </section>
+            </section>
         </section>
     </section>
 </body>

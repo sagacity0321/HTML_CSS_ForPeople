@@ -1,0 +1,45 @@
+/* 8. 테이블 요소 */
+/* table solid */
+th, td{
+    border: 0.1px solid;
+}
+
+table{
+    padding: 5px;
+    width: 100%;
+}
+
+h3{
+    margin: 0;
+}
+
+ul, ol{
+    padding-left: 30px;
+    margin: 0;
+}
+
+.ex-box{
+    margin-bottom: 10px;
+}
+
+.text{
+    padding-top: 10px;
+}
+
+.main{
+    margin: 3px;
+    padding: 10px;
+    border: 3px solid darkblue;
+}
+
+.subtitle{
+    margin:0;
+    padding-bottom: 5px;
+    
+}
+
+.group{
+    margin-top: 10px;
+    padding: 5px;
+    border: 2px solid lightgray;
+}
