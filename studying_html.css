@@ -85,3 +85,51 @@ ul, ol{
     padding: 5px;
     border: 2px solid lightgray;
 }
+
+/* CSS */
+.ex{
+    border: 1px solid lightcoral;
+}
+
+/* 7. 가상 선택자 1 */
+
+.ex.focus:focus{
+    background-color: yellow;
+}
+.ex.hover:hover{
+    font-weight: bold;
+}
+.ex.acctive:active{
+    color: red;
+}
+
+/* 9. 구체성 */
+.ex.ba::before{
+    content: "###";
+}
+.ex.ba::after{
+    content: "!!!";
+}
+.ex.fl::first-line{
+    color:rebeccapurple;
+}
+.ex.fle::first-letter{
+    color: red;
+}
+
+p#page{
+    color: red;
+}
+p.ex.important{
+    color:red !important;
+}
+
+
+/* 10: 상속 */
+.ex.sangsock{
+    color:gray;
+}
+
+
+
+

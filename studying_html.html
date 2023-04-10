@@ -1371,9 +1371,13 @@
                         <li>:hover: 마우스 포인터가 있는 요소에 적용</li>
                         <li>:active: 사용자 입력으로 활성화된 요소에 적용</li>
                     </ul>
-                    <p>
-                        a:focus{background-color:yellow;} <br>
-                        a:hover{font-weight:bold;} <br>
+                    <p class="ex focus">
+                        a:focus{background-color:yellow;}
+                    </p>
+                    <p class="ex hover">
+                        a:hover{font-weight:bold;}
+                    </p>
+                    <p class="ex active">
                         a:active{color:red;}
                     </p>
                     <ul>
@@ -1398,6 +1402,270 @@
                         </ul>
                     </ul>
                 </div>
+            </section>
+        </section>
+
+
+        <!-- 8. 가상 선택자 2 -->
+        <section id="viertual-selector2" class="main">
+            <section class="before">
+                <h3 class="subtitle">들어가기 전에</h3>
+                <div class="text">
+                    <p>가상 클래스와 유사하나 클래스가 아니라<b>요소</b></p>
+                    <p>
+                        <b>가상 요소</b> <br>
+                        현재 문서 내에 존재하지 않는 구조, 요소에 내용 추가, 스타일 부여 <br>
+                        요소의 앞, 뒤에 별도의 내용 추가 <br>
+                        추가 콘텐츠는 브라우저 화면에만 나타남(html 영향 없음)
+                    </p>
+                </div>
+            </section>
+            <h3 class="index">8: 가상 선택자 2</h3>
+            <section class="ex-box">
+                <h3 class="subtitle">가상 요소 pseudo element</h3>
+                <div class="text">
+                    <p>
+                        html 코드에 존재하지 않는 구조 요소에 스타일 부여
+                    </p>
+                    <p>가상 클래스처럼 문서 내에서 보이지 않지만, 미리 정의한 위치에 삽입</p>
+                    <p>선언: 콜론 사용 <br> 
+                        CSS3부터 가상 클래스, 가상 요소 구분을 위해 가상 요소에는 :: 더블 콜론 사용 <br>
+                        하위 브라우저에서 :: 문법을 지원하지 않는 문제: 상황에 따라 : 사용
+                    </p>
+                    <p>
+                        :pseudo-element{ <br>
+                            property: vlaue; <br>
+                        }
+                    </p>
+                </div>
+            </section>
+            <section class="group">
+                <h3 class="subtitle">기본적인 가상 요소</h3>
+                <div class="text">
+                    <ul>
+                        <li>:before: 가장 앞에 요소 삽입</li>
+                        <li>:after: 가장 뒤에 요소 삽입</li>
+                        <li>:first-line: 요소의 첫 번째 줄에 있는 텍스트</li>
+                        <li>:first-letter: 블록 레벨 요소의 첫 번째 문자</li>
+                    </ul>
+                    <p>
+                        HTML > p | Lorem ipsum dolor ~~ | /p
+                    </p>
+                    <p>
+                        CSS > p::before{content: "###"} <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        p::after{content:"!!!"} <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        p:first-line{ ... } <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        p::first-letter{ ... }
+                    </p>
+                    <p>before와 after 가상요소는 내용이 없는 상태로 생성되기 때문에 내용을 넣기 위해 "content" prop 이용</p>
+                    <p>On Brouser: before, after <br>
+                    ###Lorem ipsum dolor ~~.!!!</p>
+                    <p class="ex ba">Lorem ipusm dolor ~~.</p>
+                    <p>
+                        On Brouser: first-line <br>
+                        "Lorem ipsum dolor ~~" <br>
+                        - 모니터 가로 해상도 따라 내용 변함 -
+                    </p>
+                    <p class="ex fl">Lorem ipsum <br> dolor ~~.</p>
+                    <p>
+                        On Brouser: first-letter <br>
+                        "L"orem ipsum dolor ~~
+                    </p>
+                    <p class="ex fle">Lorem ipsum dolor ~~.</p>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- 9. 구체성 -->
+        <section id="9" class="main">
+            <section class="before">
+                <h3 class="subtitle">들어가기 전에</h3>
+                <div class="text">
+                    <p>요소에 적용된 CSS 스타일 상충할 때 스타일 적용 결정 <br>
+                    각 스타일에 구체성 부여, 판단 > 우선 적용 선택</p>
+                </div>
+            </section>
+            <h3 class="index">9: 구체성</h3>
+            <section class="ex-box">
+                <h3 class="subtitle">구체성</h3>
+                <div class="text">
+                    <p>
+                        h1{color:red;} <br>
+                        body h1{color:green;}
+                    </p>
+                    <p>같은 요소 선택하는 서로 다른 규칙: 위의 코드는 color:green 적용</p>
+                    <p>구체성: 선택자에 우선으로 적용되는 규칙에 대한 규칙 <br>
+                    선택자를 얼마나 명시적으로 선언했느냐를 수치화 <br>
+                    구체성의 값이 클수록 우선 적용</p>
+                    <p>0, 0, 0, 0 <br>
+                    4개의 숫자 값으로 이루어져 있음 <br>
+                    좌측 값부터 비교하며, 좌측 숫자가 클수록 높은 구체성</p>
+                    <ul>
+                        <li>0, 1, 0, 0: 선택자에 있는 모든 id 속성 값</li>
+                        <li>0, 0, 1, 0: class, 기타 속성, 가상 클래스</li>
+                        <li>0, 0, 0, 1: 선택자의 모든 요소, 가상 요소</li>
+                        <li>0, 0, 0, 0: 전체 선택자</li>
+                        <li>조합자는 구체성에 영향을 주지 않음: >, +, ...</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="explanation">
+                <section class="group">
+                    <h3 class="subtitle">인라인 스타일</h3>
+                    <div class="text">
+                        <p>CSS > p#page{color:red};
+                            <br> 구체성: 0, 1, 0, 1
+                        </p>
+                        <p>HTML > p id="page" sytle="color:blue" | ... | /p <br>
+                            구체성: 1, 0, 0, 0 <br>
+                            요소에 직접 인라인 방식</p>
+                        <p id="page" class="ex" style="color: blue;">결과적으로 p에 color:blue 적용</p>
+                        <p>인라인 스타일이 규칙들 중 가장 큰 구체성을 가짐</p>
+                    </div>
+                </section>
+                <section class="group">
+                    <h3 class="subtitle">important</h3>
+                    <div class="text">
+                        <p>important 키워드: 별도의 구체성 값X <br>
+                        모든 구체성을 무시하고 우선권 가짐</p>
+                        <p>속성값 뒤 한 칸 공백 + 느낌표 + important</p>
+                        <p>CSS > p#page{color:red <b>!important</b>;}</p>
+                        <p>HTML > p id="page" sytle="color:blue" | ... | /p</p>
+                        <p class="ex important" style="color: blue;">p에 important로 인해 color:red 적용</p>
+                    </div>
+                </section>
+            </section>
+        </section>
+
+
+        <!-- 10. 상속 -->
+        <section id="sangsock" class="main">
+            <section class="before">
+                <h3 class="subtitle">들어가기 전에</h3>
+                <div class="text">
+                    <p>상속: 스타일 규칙이 자손요소까지 적용</p>
+                </div>
+            </section>
+            <h3 class="index">10: 상속</h3>
+            <section class="ex-box">
+                <h3 class="subtitle">상속되는 속성</h3>
+                <div class="text">
+                    <p>CSS > h1{color:gray;} <br>
+                        HTML > h1| Hello, |em| CSS |/em|h1
+                    </p>
+                    <p class="ex sangsock">Hello <em>CSS</em></p>
+                    <p>em: 부모인 h1의 color:gray 상속</p>
+                    <p>모든 속성이 상속되지 않음
+                        <ul>
+                            <li>박스모델은 상속되지 않음</li>
+                            <ul>
+                                <li>margin</li>
+                                <li>padding</li>
+                                <li>background</li>
+                                <li>border</li>
+                            </ul>
+                            <li>상속되는 속성: 상식적으로 구분 가능</li>
+                        </ul>
+                    </p>
+                </div>
+            </section>
+            <section class="explanation">
+                <section class="group">
+                    <h3 class="subtitle">상속되는 속성의 구체성</h3>
+                    <div class="text">
+                        <p>CSS > *{color:red;} <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            h1#page{color:gray;}
+                        </p>
+                        <p>HTML > h1 id="page"| Hello, |em| CSS |/em|/h1</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>선택자</th>
+                                    <th>스타일</th>
+                                    <th>구체성</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>전체 선택자</td>
+                                    <td>color:red</td>
+                                    <td>0,0,0,0</td>
+                                </tr>
+                                <tr>
+                                    <td>id 선택자</td>
+                                    <td>color:gray</td>
+                                    <td>0,1,0,1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>"em": color:red <br>
+                        <b>상속된 속성은 아무런 구체성을 가지지 못함</b></p>
+                    </div>
+                </section>
+            </section>
+        </section>
+
+
+        <!-- 11. 캐스케이딩 -->
+        <section id="cascading" class="main">
+            <section class="before">
+                <h3 class="subtitle">들어가기 전에</h3>
+                <div class="text">
+                    <p>cascading: 스타일 규칙들이 요소에 적용되는 규칙</p>
+                    <ul>
+                        <li>폭포처럼 단계적인 의미</li>
+                        <li>모든 스타일 규칙은 단계적 규칙에 따라 요소에 적용</li>
+                    </ul>
+                </div>
+            </section>
+            <h3 class="index">11: 캐스케이딩</h3>
+            <section class="ex-box">
+                <h3 class="subtitle">cascading 규칙</h3>
+                <div class="text">
+                    <ol>
+                        <li>중요도(!important)와 (CSS의)출처</li>
+                        <li>구체성</li>
+                        <li>선언 순서</li>
+                    </ol>
+                    <p>CSS의 출처: 제작자, 사용자, 사용자 에이전트(user agent)
+                        <ul>
+                            <li>제작자: 개발자가 작성한 CSS(almost)</li>
+                            <li>사용자: 웹페이지를 방문하는 일반사용자가 작성한 CSS</li>
+                            <li>사용자 에이전트: 일반 사용자의 환경인 브라우저에 내장된 CSS</li>
+                        </ul>
+                        추세: 브라우저에서 사용자 스타일을 지원하지 않음
+                    </p>
+                    <p>스타일이 적용되는 방식
+                        <ol>
+                            <li>스타일 규칙을 모아 <strong>중요도가 명시적</strong>으로 선언 되었는가</li>
+                            <ul>
+                                <li><strong>중요도 명시</strong> 규칙 우선</li>
+                                <li>중요도 있는 규칙끼리는 아래의 다른 규칙 적용</li>
+                            </ul>
+                            <li>스타일 규칙을 <strong>출처</strong>에 따라 분류</li>
+                            <ul><li><strong>제작자 스타일 규칙</strong> > 사용자 에이전트 스타일</li></ul>
+                            <li>스타일 규칙을 <strong>구체성</strong>에 따라 분류</li>
+                            <ul><li>구체성 높은 규칙 우선</li></ul>
+                            <li>스타일 규칙을 <strong>선언 순서</strong>에 따라 분류</li>
+                            <ul><li><strong>뒤에 선언</strong>된 규칙일수록 우선</li></ul>
+                        </ol>
+                    </p>
+                </div>
+            </section>
+        </section>
+        
+
+        <!-- 12. 선택자 정리 -->
+        <section id="selector-ordering" class="main">
+            <h3 class="index">12: 선택자 정리</h3>
+            <section class="ex-box">
+                <p>다양한 선택자를 모아놓은 사이트</p>
+                <a href="http://w3schools.com">w3schools의 CSS Selector Reference</a>
             </section>
         </section>
 
